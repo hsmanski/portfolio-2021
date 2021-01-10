@@ -1,0 +1,72 @@
+// COLOR VARIABLES
+$color-primary: #3C096C;
+$color-primary-light: #7B2CBFFF; //GRADIENT AND TOP/BOTTOM LINE
+
+$color-secondary: #9D4EDDFF; //NAV MIDDLE LINE
+$color-secondary-light: #C77DFF; //TITLE AND NAV CIRCLE
+
+$color-link: #3C096CFF;
+$color-text: #240046;
+
+
+// FONT VARIABLES
+$font-primary: 'Lato', sans-serif; //headings
+$font-secondary: 'Roboto', sans-serif; //text
+
+
+// RESPONSIVE BREAKPOINTS  best practice to use em in media queries
+$bp-largest: 75em; // 1200px breakpoint (1200px / 16(standard font size) = 75em)
+$bp-larger: 70em; // 1120px breakpoint
+$bp-large: 62.5em; // 1000px breakpoint
+$bp-medium: 43.75em; // 700px breakpoint
+$bp-small: 37.5em; // 600px breakpoint
+$bp-xsmall: 29.75em; // 476px breakpoint
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: $font-secondary;
+    font-weight: 500;
+    color: $color-text;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+.wave {
+    z-index: 2;
+    transform: translateY(-1.4rem);
+    width: 100vw;  
+}
+
+.wave_footer {
+    transform: translateY(3.2rem);
+
+    &-fill {
+        height: 10px;
+        width: 100vw;
+        background-color: #fff;
+    }
+    
+    &-img {
+        width: 100vw; 
+    }
+
+    @media only screen and (max-width:$bp-xsmall) {
+        transform: translateY(2.2rem);
+    }
+}
+
+

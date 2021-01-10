@@ -1,0 +1,114 @@
+.portfolio {
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    background-image: linear-gradient(to right, $color-primary, $color-primary-light);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, min-content));
+    grid-template-rows: min-content;
+    grid-column-gap: 35px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.card {
+    width: 340px;
+    height: 400px;
+    
+    margin-bottom: 35px;
+    padding: 20px 10px;
+
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+
+    &_img {
+        border: solid 3.5px $color-primary-light;
+        box-shadow: 0 2rem 4rem rgba(black, .2);
+
+        transition: all .3s;
+
+        &-web {
+            left: 0;
+            height: 12rem; 
+            z-index: 1;
+            
+            &:active,
+            &:hover {
+                box-shadow: 0 2.5rem 4rem rgba(black, .5);
+                transform: scale(1.4) translate(3.4rem, 1.5rem);
+                z-index: 6;
+            }
+        }
+        
+        &-phone {
+            right: 0;
+            height: 12rem;
+            z-index: 2; 
+            
+            &:hover {
+                box-shadow: 0 2.5rem 4rem rgba(black, .5);
+                transform: scale(1.4) translate(-3.4rem, 1.5rem);
+                z-index: 6;
+            }
+        }
+    }
+}
+
+.tablet {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    transition: all .4s;
+    
+    &_img {
+        height: 10rem;
+        border: solid 3.5px $color-primary-light;
+        box-shadow: 0 2rem 4rem rgba(black, .2);
+        transform: translateY(-40px);
+        z-index: 3;
+
+        &:hover {
+            box-shadow: 0 2.5rem 4rem rgba(black, .5);
+            transform: scale(1.4) translate(-2rem, -4rem);
+            z-index: 6;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &_title {
+        margin-top: -30px;
+        margin-bottom: 10px;
+        padding: 7px 15px;
+
+        background-image: linear-gradient(to right, $color-primary, $color-primary-light);
+        border-radius: 4px;
+        color: #fff;
+        font-size: 2rem;
+        text-align:center;
+  
+        z-index: 5;
+    }
+
+    &_code {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 0;
+    }
+}
+
+

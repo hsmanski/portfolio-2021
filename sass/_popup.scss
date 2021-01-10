@@ -1,0 +1,205 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(#000, .8);
+    
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+    z-index: 4000;
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+
+        width: 1066px;
+        height: 355px;
+        
+        box-shadow: 0 2rem 4rem rgba(#000, .2);
+        border-radius: 10px;
+
+        opacity: 0;
+
+        transform: scale(.25);
+        transition: all .5s .2s;
+        
+        @media only screen and (max-width:$bp-larger) {
+            height: 620px;
+            width: 500px;
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            width: 300px;
+            height: 675px;
+        }
+    }
+
+    &_contentcont {
+        display: flex;
+        justify-content: center;
+
+        @media only screen and (max-width:$bp-larger) {
+            flex-direction: column;
+        }
+        
+    }
+
+    &_left {
+        height: 100%;
+        width: 50%;
+        padding: 50px 30px;
+
+        background-image: linear-gradient(to right, $color-primary, $color-primary-light);
+        border-radius: 10px;
+
+        @media only screen and (max-width:$bp-larger) {
+            width: 500px;
+            height: 45%;
+            padding: 20px 30px;
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            width: 300px;
+            height: 28%;
+        }
+    }
+
+    &_gallery {
+        display: flex;
+        justify-content: center;
+
+        &_img {
+            box-shadow: 0 2rem 4rem rgba(black, .2);
+            border-radius: 10px;
+
+            &-web {
+                width: 95%; 
+                height: 100%;
+                z-index: 1;
+            }
+        }
+    }
+
+    &_right {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+
+        width: 50%;
+        height: 100%;
+
+        padding: 0 20px 5px 30px;
+       
+        background-color: #fff;
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        @media only screen and (max-width:$bp-larger) {
+            width: 500px;
+            height: 55%;
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            width: 300px;
+            height: 100%;
+        }
+    }
+
+    &_title {
+        margin-top: 20px;
+        padding: 7px 15px;
+
+        background-image: linear-gradient(to right, $color-primary, $color-primary-light);
+        border-radius: 4px;
+        color: #fff;
+        text-align:center;
+        font-size: 2rem;
+
+        z-index: 5; 
+    }
+
+    &_paragraph {
+        padding-bottom: 1rem;
+    }
+
+    &_code {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &_code p {
+        padding-bottom: 1rem;
+
+        color: $color-text;
+        font-family: $font-secondary;
+        font-size: 1.5rem;
+    }
+
+     //OPEN STATE
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &_content {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &:target &_closecont {
+        opacity: 1;
+    }
+
+    &_closecont {
+        display: flex;
+        justify-content: flex-end;
+
+        width: 100%;
+        
+        transform: translate(-15px, 45px);
+        z-index: 7;
+
+        @media only screen and (max-width:$bp-larger) {
+            width: 533px;
+            transform: translate(-40px, 45px);
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            width: 300px;
+            transform: translate(-10px, 45px);
+        }
+    }
+
+    &_close {
+        &:link,
+        &:visited {
+            color: $color-primary-light;
+            font-size: 4rem;
+            line-height: 1;
+
+            text-decoration: none;
+            transition: all .2s;
+
+            @media only screen and (max-width:$bp-larger) {
+                color: #fff;
+            }
+        }
+
+        &:hover {
+            color: $color-secondary-light;
+        }
+    }
+}
