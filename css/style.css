@@ -15,22 +15,32 @@ body {
   line-height: 1.5;
   box-sizing: border-box; }
 
+.wave-container {
+  height: 100px;
+  overflow: hidden;
+  transform: translateY(-4.6rem); }
+  @media only screen and (max-width: 43.75em) {
+    .wave-container {
+      transform: translateY(-2.6rem); } }
+
 .wave {
   z-index: 2;
-  transform: translateY(-1.4rem);
   width: 100vw; }
 
 .wave_footer {
-  transform: translateY(3.2rem); }
+  transform: translateY(6rem); }
   .wave_footer-fill {
     height: 10px;
     width: 100vw;
     background-color: #fff; }
   .wave_footer-img {
     width: 100vw; }
-  @media only screen and (max-width: 29.75em) {
+  @media only screen and (max-width: 87.5em) {
     .wave_footer {
-      transform: translateY(2.2rem); } }
+      transform: translateY(3.2rem); } }
+  @media only screen and (max-width: 37.5em) {
+    .wave_footer {
+      transform: translateY(1.8rem); } }
 
 .heading {
   margin-top: 2rem;
@@ -89,11 +99,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: -20px 15% 40px 15%; }
+  margin: 0 15% 40px 15%;
+  transform: translateY(-5rem); }
   .about_img {
     width: 100px;
     border: solid 3px #7B2CBFFF;
-    border-radius: 50%; }
+    border-radius: 50%;
+    z-index: 3; }
 
 hr {
   width: 85px;
@@ -137,6 +149,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
     height: 600px; }
   .header_hello {
     color: #C77DFF;
@@ -576,7 +589,8 @@ hr {
     @media only screen and (max-width: 43.75em) {
       .skills_container {
         flex-direction: column;
-        align-items: center; } }
+        align-items: center;
+        width: 350px; } }
   .skills_icon {
     padding: 10px 20px;
     background-image: linear-gradient(to right, #3C096C, #7B2CBFFF);

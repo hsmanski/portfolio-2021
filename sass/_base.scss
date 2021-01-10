@@ -15,6 +15,7 @@ $font-secondary: 'Roboto', sans-serif; //text
 
 
 // RESPONSIVE BREAKPOINTS  best practice to use em in media queries
+$bp-xlargest: 87.5em; // 1400px breakpoint
 $bp-largest: 75em; // 1200px breakpoint (1200px / 16(standard font size) = 75em)
 $bp-larger: 70em; // 1120px breakpoint
 $bp-large: 62.5em; // 1000px breakpoint
@@ -45,14 +46,24 @@ body {
     box-sizing: border-box;
 }
 
+.wave-container {
+    height: 100px;
+    overflow: hidden;
+
+    transform: translateY(-4.6rem);
+
+    @media only screen and (max-width:$bp-medium) {
+        transform: translateY(-2.6rem);
+    }
+}
+
 .wave {
     z-index: 2;
-    transform: translateY(-1.4rem);
-    width: 100vw;  
+    width: 100vw;
 }
 
 .wave_footer {
-    transform: translateY(3.2rem);
+    transform: translateY(6rem);
 
     &-fill {
         height: 10px;
@@ -64,8 +75,12 @@ body {
         width: 100vw; 
     }
 
-    @media only screen and (max-width:$bp-xsmall) {
-        transform: translateY(2.2rem);
+    @media only screen and (max-width:$bp-xlargest) {
+        transform: translateY(3.2rem);
+    }
+
+    @media only screen and (max-width:$bp-small) {
+        transform: translateY(1.8rem);
     }
 }
 
