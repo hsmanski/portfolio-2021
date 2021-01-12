@@ -69,6 +69,7 @@
     width: 0;
 
     opacity: 0;
+    visibility: hidden;
     
     transform: translate(45%, 50%);
     z-index: 1500;
@@ -91,6 +92,7 @@
 .change .nav-list {
     width: 100vw;
     opacity: 1;
+    visibility: visible;
 }
   
 .nav-item {
