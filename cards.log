@@ -1,0 +1,276 @@
+<div class="container">
+          <div class="card">
+            <div class="gallery">
+              <img
+                src="img/testimonial_web.png"
+                alt="Web Photo"
+                class="gallery_img gallery_img-web"
+              />
+              <img
+                src="img/testimonial_phone.png"
+                alt="Mobile Photo"
+                class="gallery_img gallery_img-phone"
+              />
+            </div>
+            <div class="tablet">
+              <img
+                src="img/testimonial_tablet.png"
+                alt="Tablet Photo"
+                class="tablet_img"
+              />
+            </div>
+            <div class="content">
+              <div class="content_title">Fontend Mentor Project</div>
+              <div class="content_code">
+                <p class="paragraph bulletpoint">HTML</p>
+                <p class="paragraph bulletpoint">CSS</p>
+              </div>
+              <a href="#popup" class="link">Full Project Details</a>
+              <a
+                href="https://hsmanski.github.io/Testimonial-grid/"
+                target="_blank"
+                class="link"
+                >Project Website</a
+              >
+            </div>
+          </div>
+          <!--end.card-->
+
+          <div class="card">
+            <div class="gallery">
+              <img
+                src="img/testimonial_web.png"
+                alt="Web Photo"
+                class="gallery_img gallery_img-web"
+              />
+              <img
+                src="img/testimonial_phone.png"
+                alt="Mobile Photo"
+                class="gallery_img gallery_img-phone"
+              />
+            </div>
+            <div class="tablet">
+              <img
+                src="img/testimonial_tablet.png"
+                alt="Tablet Photo"
+                class="tablet_img"
+              />
+            </div>
+            <div class="content">
+              <div class="content_title">Fontend Mentor Project</div>
+              <div class="content_code">
+                <p class="paragraph bulletpoint">HTML</p>
+                <p class="paragraph bulletpoint">CSS</p>
+              </div>
+              <a href="#popup" class="link">Full Project Details</a>
+              <a
+                href="https://hsmanski.github.io/Testimonial-grid/"
+                target="_blank"
+                class="link"
+                >Project Website</a
+              >
+            </div>
+          </div>
+          <!--end.card-->
+
+          <div class="card">
+            <div class="gallery">
+              <img
+                src="img/testimonial_web.png"
+                alt="Web Photo"
+                class="gallery_img gallery_img-web"
+              />
+              <img
+                src="img/testimonial_phone.png"
+                alt="Mobile Photo"
+                class="gallery_img gallery_img-phone"
+              />
+            </div>
+            <div class="tablet">
+              <img
+                src="img/testimonial_tablet.png"
+                alt="Tablet Photo"
+                class="tablet_img"
+              />
+            </div>
+            <div class="content">
+              <div class="content_title">Fontend Mentor Project</div>
+              <div class="content_code">
+                <p class="paragraph bulletpoint">HTML</p>
+                <p class="paragraph bulletpoint">CSS</p>
+              </div>
+              <a href="#popup" class="link">Full Project Details</a>
+              <a
+                href="https://hsmanski.github.io/Testimonial-grid/"
+                target="_blank"
+                class="link"
+                >Project Website</a
+              >
+            </div>
+          </div>
+          <!--end.card-->
+        </div>
+        <!--end.container-->
+
+        <div class="popup" id="popup">
+        <div class="popup_content">
+          <div class="popup_closecont">
+            <a href="#portfolio" class="popup_close">&times;</a>
+          </div>
+
+          <div class="popup_contentcont">
+            <div class="popup_left">
+              <div class="popup_gallery">
+                <img
+                  src="img/testimonial_web.png"
+                  alt="Web Photo"
+                  class="popup_gallery_img popup_gallery_img-web"
+                />
+              </div>
+            </div>
+            <!--end.popup left-->
+            <div class="popup_right">
+              <div class="popup_title">Fontend Mentor Project</div>
+              <p class="paragraph popup_paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu
+                mi bibendum neque egestas congue. Vitae nunc sed velit
+                dignissim. Hendrerit dolor magna eget est. Ac turpis egestas
+                maecenas pharetra convallis posuere morbi leo.
+              </p>
+              <div class="popup_code">
+                <p class="bulletpoint">HTML</p>
+                <p class="bulletpoint">CSS</p>
+                <p class="bulletpoint">SASS</p>
+                <p class="bulletpoint">Javascript</p>
+              </div>
+              <a
+                href="https://hsmanski.github.io/Testimonial-grid/"
+                target="_blank"
+                class="link"
+                >Project Website</a
+              >
+              <a
+                href="https://github.com/hsmanski/Testimonial-grid"
+                target="_blank"
+                class="link"
+                >Github Project Repository</a
+              >
+            </div>
+            <!--end.popup right-->
+          </div>
+          <!--end.contentcont-->
+        </div>
+        <!--end.content-->
+      </div>
+      <!--end.popup section-->
+
+
+    <!-- CSS Styles -->
+      .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, min-content));
+    grid-template-rows: min-content;
+    grid-column-gap: 35px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.card {
+    width: 340px;
+    height: 400px;
+    
+    margin-bottom: 35px;
+    padding: 20px 10px;
+
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+
+    &_img {
+        border: solid 3.5px $color-primary-light;
+        box-shadow: 0 2rem 4rem rgba(black, .2);
+
+        transition: all .3s;
+
+        &-web {
+            left: 0;
+            height: 12rem; 
+            z-index: 1;
+            
+            &:active,
+            &:hover {
+                box-shadow: 0 2.5rem 4rem rgba(black, .5);
+                transform: scale(1.4) translate(3.4rem, 1.5rem);
+                z-index: 6;
+            }
+        }
+        
+        &-phone {
+            right: 0;
+            height: 12rem;
+            z-index: 2; 
+            
+            &:hover {
+                box-shadow: 0 2.5rem 4rem rgba(black, .5);
+                transform: scale(1.4) translate(-3.4rem, 1.5rem);
+                z-index: 6;
+            }
+        }
+    }
+}
+
+.tablet {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    transition: all .4s;
+    
+    &_img {
+        height: 10rem;
+        border: solid 3.5px $color-primary-light;
+        box-shadow: 0 2rem 4rem rgba(black, .2);
+        transform: translateY(-40px);
+        z-index: 3;
+
+        &:hover {
+            box-shadow: 0 2.5rem 4rem rgba(black, .5);
+            transform: scale(1.4) translate(-2rem, -4rem);
+            z-index: 6;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &_title {
+        margin-top: -30px;
+        margin-bottom: 10px;
+        padding: 7px 15px;
+
+        background-image: linear-gradient(to right, $color-primary, $color-primary-light);
+        border-radius: 4px;
+        color: #fff;
+        font-size: 2rem;
+        text-align:center;
+  
+        z-index: 5;
+    }
+
+    &_code {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 0;
+    }
+}
+
+
